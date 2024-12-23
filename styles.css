@@ -4,7 +4,7 @@
 
 body{
     font-family:"Red Hat Text", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     background-color: rgb(162, 118, 161);
     color: #ffffff;
     line-height: 1.6;
@@ -53,17 +53,11 @@ header h1 {
   }
   
   
-  /* About Section */
-  /* .about {
-    display: flex;
-    padding: rem;
-    align-items: center;
-  }
-   */
+  
   .btn-1 {
     width: 120px;
     height: 1000px;
-    background-color: purple;
+    background-color: pink;
     border-radius: 10px;
   }
   
@@ -121,13 +115,15 @@ header h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     align-content: space-around;
+    align-items: center;
     gap: 1rem;
     padding: 2rem;
   }
   
   .service-card {
+
     background-color: #333;
     padding: 1.5rem;
     border-radius: 10px;
@@ -159,14 +155,20 @@ header h1 {
     .services {
       grid-template-columns: repeat(2, 1fr);
     }
-    .about {
+    /* .about {
         flex-direction: column;
         align-items: flex-start;
-      }
+      } */
   }
   
   /* For devices with max width of 768px (Tablets, iPhone XS Max) */
   @media (max-width: 768px) {
+    .about-info .img .the-information {
+      display: flex;flex-direction: column;align-items:flex-start;justify-content:center;gap: 40vh;
+    }
+    
+
+
     header {
       flex-direction: column;
       align-items: flex-start;
@@ -189,22 +191,32 @@ header h1 {
     }
   
 
-    .services {
-      grid-template-columns: 1fr;
+    .services-grid {
+      grid-template-columns:1fr;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      font-size: 1.3px;
+
+    }
+    .service-card{
+      display: flex;
+      flex-direction: column;
+      font-size:2px;
+
     }
   
-    .about {
-      flex-direction: column;
-      align-items: flex-start;
-    }
   
     img {
       max-width: 100%;
       margin-bottom: 1rem;
     }
-    .about {
+    .the-information {
+      font-size:2rem ;
+      display: flex;
         flex-direction: column;
         align-items: flex-start;
+        color: #ffffff;
       }
   }
   
@@ -253,13 +265,12 @@ header h1 {
   }
   
   
-  .container {
+  /* .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-  }
+  } */
   
-  /* Header */
   .header {
     background: #292942;
     padding: 20px 0;
@@ -299,7 +310,6 @@ header h1 {
     color:pink;
   }
   
-  /* Sections */
   .about, .services, .portfolio, .contact {
     padding: 50px 0;
     text-align: center;
@@ -315,7 +325,7 @@ header h1 {
     font-size: 1rem;
   }
   
-  /* Service Cards */
+
   .cards {
     display: flex;
     justify-content: center;
@@ -325,9 +335,8 @@ header h1 {
   .service-card {
     background: #33334f;
     padding: 20px;
-
     border-radius: 8px;
-    width: 30%;
+    width: 70%;
   }
   
   .service-card h3 {
@@ -341,7 +350,6 @@ header h1 {
   }
   
   
-  /* Contact Form */
   form {
     display: flex;
     flex-direction: column;
@@ -371,7 +379,7 @@ header h1 {
     background: pink;
   }
   
-  /* Footer */
+
   .footer {
     background: #292942;
     padding: 20px 0;
@@ -392,12 +400,13 @@ header h1 {
     background-color: purple;
 }
 
-.image-container { display: flex; justify-content: center; /* Center the image horizontally */ align-items: center; /* Center the image vertically */ height: 100vh; /* Full viewport height */ } 
-img { width: 200px; /* Adjust the size as needed */ transition: transform 0.5s ease-in-out; /* Smooth transition */ } 
+
+img { width: 200px; 
+  transition: transform 0.5s ease-in-out; /* Smooth transition */ } 
 img:hover { transform: scale(1.2) rotate(2deg); /* Scale and rotate on hover */ }
 
 
-.img-backdrop { display: flex; justify-content: center; /* Center the image horizontally */ 
+.img-backdrop { display: flex; justify-content: center; 
     align-items: center; /* Center the image vertically */
      height: 65vh; /* Full viewport height */ 
     } 
